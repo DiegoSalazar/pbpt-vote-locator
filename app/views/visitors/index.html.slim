@@ -1,0 +1,112 @@
+a name="about"
+.intro-header
+  .container
+    .row
+      .col-lg-12
+        .intro-message
+          h1 Woobox Votes CSV Converter
+          h3 Use the file upload field below to upload your Woobox CSV.
+          h3 Locations will be added as a new column to the CSV and the file will download automatically.
+          hr.intro-divider/
+
+    .row
+      .col-lg-3
+      .col-lg-6
+        = form_for :locator, url: locators_path, method: :post, html: { multipart: true, class: 'form-inline' } do
+          .form-group
+            = file_field_tag 'votes_csv', class: 'btn btn-default'
+
+          = submit_tag 'Convert', class: 'btn btn-primary'
+      .col-lg-3
+
+
+  /! /.container
+/! /.intro-header
+/! Page Content
+a name="services"
+.content-section-a
+  .container
+    .row
+      .col-lg-5.col-sm-6
+        hr.section-heading-spacer/
+        .clearfix
+        h2.section-heading
+          | How to export the Woobox votes file...
+        p.lead
+          | Log in to your Woobox account and click&nbsp;
+          span.badge.alert-success  Manage
+          |  on the campaign you wish to export.
+      .col-lg-5.col-lg-offset-2.col-sm-6
+        = image_tag 'woobox-step-1.jpg', class: 'img-responsive'
+  /! /.container
+/! /.content-section-a
+.content-section-b
+  .container
+    .row
+      .col-lg-5.col-lg-offset-1.col-sm-push-6.col-sm-6
+        hr.section-heading-spacer/
+        .clearfix
+        h2.section-heading
+          | Navigate to Download Exports page...
+        p.lead
+          | In the campaign management screen on the left side bar, click on&nbsp;
+          span.badge.alert-default  Export
+          |  and then click on&nbsp;
+          span.badge.alert-default  Download Exports
+      .col-lg-5.col-sm-pull-6.col-sm-6
+        = image_tag 'woobox-step-2.jpg', class: 'img-responsive'
+  /! /.container
+/! /.content-section-b
+.content-section-a
+  .container
+    .row
+      .col-lg-5.col-sm-6
+        hr.section-heading-spacer/
+        .clearfix
+        h2.section-heading
+          | Generate the export file...
+        p.lead
+          | In the Download Exports page click on the&nbsp;
+          span.badge.alert-default  Download
+          |  button of the&nbsp;
+          span.badge.alert-default  Export Votes
+          |  box. It should then turn into a&nbsp;
+          span.badge.alert-default  Refresh Status
+          |  button. Wait a few seconds and click it to check the export status.
+      .col-lg-5.col-lg-offset-2.col-sm-6
+        = image_tag 'woobox-step-3.jpg', class: 'img-responsive'
+  /! /.container
+/! /.content-section-a
+.content-section-b
+  .container
+    .row
+      .col-lg-5.col-lg-offset-1.col-sm-push-6.col-sm-6
+        hr.section-heading-spacer/
+        .clearfix
+        h2.section-heading
+          | Download the export file...
+        p.lead
+          | After waiting a minute, the&nbsp;
+          span.badge.alert-default  Refresh Status
+          |  button will turn into a&nbsp;
+          span.badge.alert-default  Download
+          |  button. Click it and your Votes CSV file will download.
+      .col-lg-5.col-sm-pull-6.col-sm-6
+        = image_tag 'woobox-step-4.jpg', class: 'img-responsive'
+  /! /.container
+/! /.content-section-b
+
+a name="contact"
+.banner
+  .container
+    .row
+      .col-lg-12
+        h2 Now you have the downloaded zip file. You have to unzip it first and then upload at the top of this page!
+
+/! /.banner
+/! Footer
+footer
+  .container
+    .row
+      .col-lg-12
+        p.copyright.text-muted.small Copyright © No One
